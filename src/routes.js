@@ -1,8 +1,8 @@
-const express = require('express');
+const express = require("express");
 const routes = express.Router();
 
-const PlanetController = require('../controller/PlanetController')
+const PlanetController = require("../controller/PlanetController");
 
-routes.post('/planets', PlanetController.store);
+routes.post("/planets", PlanetController.store);
 
-module.exports = routes;        
+module.exports = routes;
