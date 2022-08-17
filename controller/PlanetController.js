@@ -8,26 +8,27 @@ module.exports = {
     return res.json(planet);
   },
   async index(req, res) {
-      const planets = await Planet.findAll();
-      return res.json(planets)
+    const planets = await Planet.findAll();
+    return res.json(planets);
   },
   async put(req, res) {
-    const {name, size, position} = req.body
+    const { name, size, position } = req.body;
     await Planet.update(
-       {name, size, position},{
-          where: {
-            id: req.params.id
-          },
-       },
+      { name, size, position },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
     );
-    return res.send("Planet sucessfully updated!")
+    return res.send("Planet sucessfully updated!");
   },
   async delete(req, res) {
     await Planet.destroy({
-        where:{
-          id: req.params.id
-        }
-    })
-    return res.send("Planet sucessfully deleted!")
-  }
+      where: {
+        id: req.params.id,
+      },
+    });
+    return res.send("Planet sucessfully deleted!");
+  },
 };
