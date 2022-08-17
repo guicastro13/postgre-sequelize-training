@@ -17,7 +17,7 @@ routes.get("/planet/:planetId/satellites", SatelliteController.index);
 routes.post("/caps", CapController.store);
 routes.get("/caps", CapController.index);
 
-routes.post("/spaceship", Spaceship.store);
-routes.get("/spaceship", Spaceship.index);
+routes.post("/caps/:capsId/spaceships", Spaceship.store);
+routes.get("/caps/:capsId/spaceships", Spaceship.index);
 
 module.exports = routes;
