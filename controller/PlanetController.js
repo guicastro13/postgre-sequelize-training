@@ -20,7 +20,7 @@ module.exports = {
           },
        },
     );
-    return res.send("Planeta atualizado com sucesso!")
+    return res.send("Planet sucessfully updated!")
   },
   async delete(req, res) {
     await Planet.destroy({
@@ -28,6 +28,6 @@ module.exports = {
           id: req.params.id
         }
     })
-    return res.send("Planeta excluido com sucesso!")
+    return res.send("Planet sucessfully deleted!")
   }
 };
